@@ -5,7 +5,12 @@ export default {
     './*.html'
   ],
   theme: {
-    extend: {},
+    extend: {
+      width: {
+        '25%': '25%',
+        '16px': '16px'
+      }
+    },
   },
   plugins: [],
 }
