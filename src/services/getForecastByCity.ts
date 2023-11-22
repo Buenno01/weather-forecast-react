@@ -8,13 +8,15 @@ export const getForecastByCity = async (city:string) => {
     const data = await response.json();
     const { forecast: { forecastday: forecast } } = data;
     const formattedData = forecast.map((element: any) => ({
+      weekday: 'Monday',
       date: new Date(element.date),
       icon: element.day.condition.icon,
       condition: element.day.condition.text,
       minTemp: element.day.mintemp_c,
       maxTemp: element.day.maxtemp_c,
     }));
-    console.log(formattedData);
+
+    return formattedData;
   } catch (error: any) {
     console.log(error.message);
   }
