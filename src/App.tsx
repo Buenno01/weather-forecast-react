@@ -11,7 +11,8 @@ function App() {
     <div className="min-w-screen min-h-screen flex flex-col justify-center">
       <div
         className="flex flex-col self-center w-4/12
-        bg-slate-800 text-slate-50 rounded-2xl p-2 gap-2"
+        bg-slate-800 text-slate-50 rounded-2xl p-2 gap-2
+        md:w-5/12 lg:w-4/12"
       >
         <Header city={ cityMockup } />
         <div className="flex">
