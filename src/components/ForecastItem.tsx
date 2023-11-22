@@ -10,7 +10,7 @@ type ForecastItemProps = {
 function ForecastItem(props: ForecastItemProps) {
   const { weekday, date, icon, condition, minTemp, maxTemp } = props;
   return (
-    <div>
+    <li>
       <h3>
         { weekday }
       </h3>
@@ -20,7 +20,7 @@ function ForecastItem(props: ForecastItemProps) {
       <img src={ icon } alt="weather icon" />
       <h3>{ condition }</h3>
       <p>{`${minTemp}-${maxTemp}°C`}</p>
-    </div>
+    </li>
   );
 }
 
