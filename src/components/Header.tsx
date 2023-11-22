@@ -5,7 +5,7 @@ type HeaderProps = {
 function Header(props: HeaderProps) {
   const { city } = props;
   return (
-    <h2>{ city }</h2>
+    <h2 className="text-2xl pl-2">{ city }</h2>
   );
 }
 

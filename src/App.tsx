@@ -16,7 +16,13 @@ function App() {
       >
         <Header city={ cityMockup } />
         <div className="flex">
-          <ul className="flex w-full">
+          <button
+            aria-label="previous page"
+            className="flex min-w-fit"
+          >
+            <img className="w-10 -rotate-180" src="./src/assets/caret.svg" alt="" />
+          </button>
+          <ul className="flex w-full overflow-hidden">
             {
               apiData.map((forecast: any, index: number) => (
                 <ForecastItem
@@ -31,15 +37,10 @@ function App() {
             }
           </ul>
           <button
-            className="flex w-16px"
-            style={ {
-              backgroundImage: 'url(./src/assets/caret.svg)',
-              backgroundRepeat: 'no-repeat',
-              width: '16px',
-              backgroundPosition: 'center',
-            } }
+            aria-label="next page"
+            className="flex min-w-fit"
           >
-            o
+            <img className="w-10" src="./src/assets/caret.svg" alt="" />
           </button>
         </div>
       </div>
